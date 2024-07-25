@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Saira", sans-serif;
+}
+html,body{
+    width: 100%;
+    height:100%;
+    color: #fff;
+}
+
+#page1{
+    width:100vw;
+    height:100vh;
+    background-color:#111111 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#page1 h1{
+    font-size: 8vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 8vw;
+}
+#page1 h1 svg{
+    height: 6vw;
+    width: 6vw;
+    background-color: #0da34e;
+    border-radius: 50%;
+    padding:5px 10px;
+}
+#page1 p{
+    font-weight: 400;
+    text-align: center;
+    margin-top: 3vh;
+}
+.page1-button {
+    display: flex;
+    text-transform: lowercase;
+  
+}
+.page1-button h4{
+    padding:5px 10px;
+    font-weight: 400;
+    border:1px solid #f8eeee;
+    border-radius: 50px;
+    margin-top: 2vh;
+   
+}
+.page1-button h4:nth-last-child(2){
+    border: none;
+    
+}
+nav{
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    height:10vh;
+    width:100%;
+    justify-content: space-between;
+    padding:1vw 15vw;
+    z-index: 10;
+}
+.nav-items{
+    display: flex;
+    gap: 2vw;
+    align-items: flex-start;
+    padding:1vh 0;
+    position: relative;
+    z-index: 10;
+}
+.nav-items h4{
+    font-size: 0.75vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 2.6vw;
+}
+.nav-items h5{
+    margin-bottom: 1vw;
+   display: none;
+   overflow: hidden;
+}
+.nav-items h5 span{
+    font-size: 0.73vw;
+    font-weight: 400;
+    display: inline-block;
+}
+nav button{
+    background-color: #0da34e;
+    border: none;
+    outline: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding:12px;
+    border-radius: 50px;
+    font-size: 0.75vw;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+nav button svg{
+    height: 1vw;
+    margin-left: 1.65vw;
+   
+}
+#nav-bottom{
+   background-color: #111111;
+    width:70%;
+    height:0vh;
+    position: absolute;
+    top:100%;
+    border-bottom: 1px solid #fff;
+    z-index: 9;
+}
+#moving-div{
+    /* background-color: red; */
+    position: absolute;
+    width:44%;
+    bottom:5%;
+    margin-top: 10vh;
+    padding: 2vw;
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
+#moving-div .move{
+    display: inline-block;
+    animation: move;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+}
+#moving-div .move img{
+    height: 1vw;
+    margin: 0 1vw;
+}
+@keyframes move {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.blur-left{
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right,#111111,transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    
+}
+.blur-right{
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right,transparent,#111111);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
